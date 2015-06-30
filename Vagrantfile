@@ -1,6 +1,7 @@
 $SCRIPT = <<SCRIPT
 (
-yum install -y nc
+yum install -y nc telnet
+nc -lk 1992 &
 curl -sSL https://rvm.io/mpapis.asc | sudo gpg2 --import -
 curl -L get.rvm.io | bash -s stable
 source /etc/profile.d/rvm.sh
